@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Language_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 54cf972d0a143a548be714579b99d789, type: 2}
+  m_Metadata:
+    m_Items:
+    - id: 0
+  m_TableData:
+  - m_Id: 210496720896
+    m_Localized: Daily Reward
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 3904789352448
+    m_Localized: Start
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 3961089495040
+    m_Localized: Exit
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 4072637009920
+    m_Localized: Russian
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 4137376092160
+    m_Localized: English
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 4184960471040
+    m_Localized: Load Bundle
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 4327008964608
+    m_Localized: Show Notification
+    m_Metadata:
+      m_Items:
+      - id: 0
+  - m_Id: 4423209521152
+    m_Localized: Load Prefab
+    m_Metadata:
+      m_Items:
+      - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 0010950231000000001095278d030000001055439a0300000010153cb40300000010d54ec303000000101563ce0300000010d575ef0300000010d5db05040000
