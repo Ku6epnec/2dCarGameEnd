@@ -16,7 +16,21 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d7413f052ff8f7f4fb3b8313ef864ec2
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 3da3c71f6c5c2304da45a3fece8f039f
+    m_Address: Prefabs/Reward Window
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fa0efda4d0d8ae146834827aa079b3f0
+    m_Address: Prefabs/Prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 07a0d90fada21c24eb82c9852c647296, type: 2}
   m_SchemaSet:

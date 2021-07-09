@@ -20,13 +20,15 @@ MonoBehaviour:
   - m_GUID: cb6e51e69e2d31d4996512e466ff437e
     m_Address: Assets/Audio/click_button.mp3
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Audios
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 6b12cd27c96fd9049b4be4ce055d1034
     m_Address: Assets/Audio/MenuAudio.mp3
     m_ReadOnly: 0
-    m_SerializedLabels: []
+    m_SerializedLabels:
+    - Audios
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
