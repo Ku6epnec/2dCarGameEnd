@@ -119,7 +119,7 @@ public class FightWindowController : BaseController
                 break;
 
             case DataType.Power:
-                _fightWindowViewInstance.CountPowerText.text = $"Player Power {countChangeData.ToString()}";
+                _fightWindowViewInstance.CountPowerText.text = $"Player Force {countChangeData.ToString()}";
                 _power.Power = countChangeData;
                 break;
         }

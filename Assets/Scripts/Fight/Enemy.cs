@@ -10,8 +10,8 @@ class Enemy : IEnemy
 {
     #region Fields
 
-    private const int KCoins = 5;
-    private const float KForce = 1.5f;
+    private const int KCoins = 7;
+    private const float KForce = 2f;
     private const int MaxHealthPlayer = 20;
     
     private string _name;

@@ -22,15 +22,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Prefabs
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: fa0efda4d0d8ae146834827aa079b3f0
     m_Address: Prefabs/Prefab
     m_ReadOnly: 0
     m_SerializedLabels:
     - Prefabs
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+  - m_GUID: ef290bdb62919be43b2c5cb327857e89
+    m_Address: Prefabs/Fight Window
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
+  - m_GUID: a37bac9d30ec4ff479870aab33c782f0
+    m_Address: Prefabs/Start Fight Window
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefabs
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 07a0d90fada21c24eb82c9852c647296, type: 2}
   m_SchemaSet:
