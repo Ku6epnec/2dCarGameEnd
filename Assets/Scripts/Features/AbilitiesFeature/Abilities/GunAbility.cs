@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using Company.Project.Content;
 using UnityEngine;
 
+
 namespace Company.Project.Features.Abilities
 {
     public class GunAbility : IAbility

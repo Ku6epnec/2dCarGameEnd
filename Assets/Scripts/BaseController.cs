@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
+
 public abstract class BaseController : IDisposable
 {
+    #region Fields
+
     private List<BaseController> _baseControllers;
     private List<GameObject> _gameObjects;
     private bool _isDisposed;
-    
+
+    #endregion
+
+    #region Methods
+
     public void Dispose()
     {
         if (!_isDisposed)
@@ -54,4 +61,6 @@ public abstract class BaseController : IDisposable
     {
         
     }
+
+    #endregion
 }

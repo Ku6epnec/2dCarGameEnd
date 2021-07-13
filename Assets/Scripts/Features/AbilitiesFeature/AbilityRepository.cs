@@ -1,12 +1,15 @@
 using System.Collections.Generic;
 using Company.Project.Content;
 
+
 namespace Company.Project.Features.Abilities
 {
     public class AbilityRepository : BaseController, IRepository<int, IAbility>
     {
+        #region Fields
+
         private readonly Dictionary<int, IAbility> _abilityMapById = new Dictionary<int, IAbility>();
-        
+
         public IReadOnlyDictionary<int, IAbility> Collection => _abilityMapById;
         
         public AbilityRepository(
@@ -14,6 +17,10 @@ namespace Company.Project.Features.Abilities
         {
             PopulateItems(ref _abilityMapById, itemConfigs);
         }
+
+        #endregion
+
+        #region Methods
 
         private void PopulateItems(
             ref Dictionary<int, IAbility> upgradeHandlersMapByType,
@@ -43,5 +50,7 @@ namespace Company.Project.Features.Abilities
         {
             _abilityMapById.Clear();
         }
+
+        #endregion
     }
 }

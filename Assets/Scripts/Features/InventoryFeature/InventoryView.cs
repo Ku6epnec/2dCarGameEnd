@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Company.Project.Features.Items;
 using UnityEngine;
 
+
 namespace Company.Project.Features.Inventory
 {
     public class InventoryView : MonoBehaviour, IInventoryView

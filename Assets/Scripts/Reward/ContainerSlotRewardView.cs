@@ -2,19 +2,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ContainerSlotRewardView : MonoBehaviour
 {
+    #region Fields
+
     [SerializeField] 
     private Image _selectBackground;
-    
     [SerializeField] 
     private Image _iconCurrency;
     
     [SerializeField] 
     private TMP_Text _textDays;
-    
     [SerializeField] 
     private TMP_Text _countReward;
+
+    #endregion
 
     public void SetData(Reward reward, int countDay, bool isSelect)
     {

@@ -4,15 +4,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class DailyRewardView : MonoBehaviour
 {
+    #region Fields
+
     private const string CurrentSlotInActiveKey = nameof(CurrentSlotInActiveKey);
     private const string TimeGetRewardKey = nameof(TimeGetRewardKey);
   
     [Header("Settings Time Get Reward")]
     [SerializeField]
     private float _timeCooldown = 86400;
-  
     [SerializeField]
     private float _timeDeadline = 172800;
   
@@ -32,15 +34,16 @@ public class DailyRewardView : MonoBehaviour
   
     [SerializeField]
     private Button _getRewardButton;
-  
     [SerializeField]
     private Button _resetButton;
-
     [SerializeField]
     private Button _closeButton;
 
+    #endregion
+
+    #region Properties
+
     public float TimeCooldown => _timeCooldown;
-  
     public float TimeDeadline => _timeDeadline;
   
     public List<Reward> Rewards => _rewards;
@@ -52,9 +55,7 @@ public class DailyRewardView : MonoBehaviour
     public ContainerSlotRewardView ContainerSlotRewardView => _containerSlotRewardView;
   
     public Button GetRewardButton => _getRewardButton;
-  
     public Button ResetButton => _resetButton;
-
     public Button CloseButton => _closeButton;
 
     public int CurrentSlotInActive
@@ -82,4 +83,6 @@ public class DailyRewardView : MonoBehaviour
                 PlayerPrefs.DeleteKey(TimeGetRewardKey);
         }
     }
+
+    #endregion
 }

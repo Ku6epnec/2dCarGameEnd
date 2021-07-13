@@ -3,25 +3,30 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 [RequireComponent(typeof(AudioSource))]
 public class CustomButton : Button
 {
+    #region Fields
+
     public static string ChangeButtonType => nameof(_animationButtonType);
     public static string CurveEase => nameof(_curveEase);
     public static string Duration => nameof(_duration);
     
     [SerializeField] 
     private AnimationButtonType _animationButtonType = AnimationButtonType.ChangePosition;
-    
     [SerializeField] 
     private Ease _curveEase = Ease.Linear;
-    
     [SerializeField] 
     private float _duration = 0.6f;
     
     private float _strength = 30.0f;
     private RectTransform _rectTransform;
     private AudioSource _audioSource;
+
+    #endregion
+
+    #region UnityMethods
 
     protected override void Awake()
     {
@@ -42,6 +47,10 @@ public class CustomButton : Button
         _audioSource.Play();
     }
 
+    #endregion
+
+    #region Methods
+
     private void ActivateAnimation()
     {
         switch (_animationButtonType)
@@ -54,4 +63,6 @@ public class CustomButton : Button
                 break;
         }
     }
+
+    #endregion
 }

@@ -2,17 +2,25 @@
 using Tools;
 using UnityEngine.Purchasing;
 
+
 namespace Profile.Shop
 {
     public class ShopTools : IShop, IStoreListener
     {
+        #region Fields
+
         private IStoreController _controller;
         private IExtensionProvider _extensionProvider;
+
         private bool _isInitialized;
 
         private readonly SubscriptionAction _onSuccessPurchase;
         private readonly SubscriptionAction _onFailedPurchase;
-        
+
+        #endregion
+
+        #region Properties
+
         public ShopTools(List<ShopProduct> products)
         {
             _onSuccessPurchase = new SubscriptionAction();
@@ -27,7 +35,11 @@ namespace Profile.Shop
 
         public IReadOnlySubscriptionAction OnSuccessPurchase => _onSuccessPurchase;
         public IReadOnlySubscriptionAction OnFailedPurchase => _onFailedPurchase;
-        
+
+        #endregion
+
+        #region Methods
+
         public void Buy(string id)
         {
             if(!_isInitialized)
@@ -86,6 +98,8 @@ namespace Profile.Shop
         {
             
         }
+
+        #endregion
     }
 }
 

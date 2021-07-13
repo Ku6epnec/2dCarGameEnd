@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 
+
 namespace Game.TapeBackground
 {
     public class Background : MonoBehaviour
     {
+        #region Fields
+
         [SerializeField]
         private float _leftBorder;
         [SerializeField]
         private float _rightBorder;
-
         [SerializeField]
         private float _relativeSpeedRate;
+
+        #endregion
 
         public void Move(float value)
         {

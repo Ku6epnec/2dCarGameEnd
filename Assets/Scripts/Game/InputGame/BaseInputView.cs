@@ -1,10 +1,21 @@
 ﻿using Tools;
 using UnityEngine;
 
+
 namespace Game.InputLogic
 {
     public abstract class BaseInputView : MonoBehaviour
     {
+        #region Fields
+
+        protected float _speed;
+        private SubscriptionProperty<float> _leftMove;
+        private SubscriptionProperty<float> _rightMove;
+
+        #endregion
+
+        #region Methods
+
         public virtual void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
         {
             _leftMove = leftMove;
@@ -12,10 +23,6 @@ namespace Game.InputLogic
             _speed = speed;
         }
 
-
-        protected float _speed;
-        private SubscriptionProperty<float> _leftMove;
-        private SubscriptionProperty<float> _rightMove;
 
         protected virtual void OnLeftMove(float value)
         {
@@ -26,6 +33,8 @@ namespace Game.InputLogic
         {
             _rightMove.Value = value;
         }
-    }  
+
+        #endregion
+    }
 }
 

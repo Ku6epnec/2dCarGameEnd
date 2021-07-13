@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 namespace Game.InputLogic
 {
     public class InputSwipeView : BaseInputView, IBeginDragHandler, IEndDragHandler, IDragHandler
@@ -8,7 +9,9 @@ namespace Game.InputLogic
 
         private float _threshold = 40;
         private Vector2 _startPosition;
-        
+
+        #region Methods
+
         public void OnBeginDrag(PointerEventData eventData)
         {
             _startPosition = eventData.position;
@@ -30,6 +33,8 @@ namespace Game.InputLogic
         {
             
         }
+
+        #endregion
     }
 }
 

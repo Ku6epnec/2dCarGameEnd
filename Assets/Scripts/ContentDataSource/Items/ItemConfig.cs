@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 namespace Company.Project.Content
 {
     [CreateAssetMenu(fileName = "Item", menuName = "Item", order = 0)]

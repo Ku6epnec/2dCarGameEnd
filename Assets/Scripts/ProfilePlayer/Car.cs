@@ -1,5 +1,6 @@
 ﻿using Company.Project.Features.Shed;
 
+
 namespace Profile
 {
     public class Car : IUpgradable

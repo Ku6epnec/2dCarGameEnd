@@ -4,17 +4,22 @@ using Company.Project.Features.Inventory;
 using Company.Project.Features.Items;
 using JetBrains.Annotations;
 
+
 namespace Company.Project.Features.Shed
 {
     public class ShedController : BaseController, IShedController
     {
+        #region Fields
+
         private readonly IUpgradable _upgradable;
         
         private readonly IRepository<int, IUpgradeHandler> _upgradeHandlersRepository;
         private readonly IInventoryController _inventoryController;
 
+        #endregion
+
         #region Life cycle
-        
+
         public ShedController(
             [NotNull] IRepository<int, IUpgradeHandler> upgradeHandlersRepository,
             [NotNull] IInventoryController inventoryController,

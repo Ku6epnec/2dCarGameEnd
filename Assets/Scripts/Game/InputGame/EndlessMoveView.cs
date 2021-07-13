@@ -2,10 +2,14 @@
 using Tools;
 using UnityEngine;
 
+
 namespace Game.InputLogic
 {
     public class EndlessMoveView : BaseInputView
     {
+
+        #region Methods
+
         public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
         {
             base.Init(leftMove, rightMove, speed);
@@ -21,6 +25,8 @@ namespace Game.InputLogic
         {
             OnRightMove(_speed * Time.deltaTime);
         }
+
+        #endregion
     }
 }
 

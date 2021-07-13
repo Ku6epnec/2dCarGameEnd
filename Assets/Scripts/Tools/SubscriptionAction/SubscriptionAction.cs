@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Tools
 {
     public class SubscriptionAction : IReadOnlySubscriptionAction
@@ -10,6 +11,8 @@ namespace Tools
         {
             _action?.Invoke();
         }
+
+        #region Subscriber
         
         public void SubscribeOnChange(Action subscriptionAction)
         {
@@ -20,6 +23,8 @@ namespace Tools
         {
             _action -= unsubscriptionAction;
         }
+
+        #endregion
     }
 }
 

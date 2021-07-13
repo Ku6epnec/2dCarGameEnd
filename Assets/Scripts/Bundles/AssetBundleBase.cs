@@ -1,21 +1,26 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+
 public class AssetBundleBase : MonoBehaviour
 {
+    #region Fields
+
     private const string UrlAssetBundleSprite = "https://github.com/Ku6epnec/Bundles/raw/master/LZMA/menubundle";
     private const string UrlAssetBundleAudio = "https://github.com/Ku6epnec/Bundles/raw/master/LZMA/audiobundle";
 
     [SerializeField]
     private DataSpriteBundle[] _dataSpriteBundles;
-
     [SerializeField]
     private DataAudioBundle[] _dataAudioBundles;
 
     private AssetBundle _spriteAssetBundle;
     private AssetBundle _audioAssetBundle;
+
+    #endregion
+
+    #region Methods
 
     protected IEnumerator DownloadAndSetAssetBundle()
     {
@@ -80,4 +85,6 @@ public class AssetBundleBase : MonoBehaviour
             data.AudioSource.Play();
         }
     }
+
+    #endregion
 }

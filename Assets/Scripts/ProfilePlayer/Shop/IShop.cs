@@ -1,5 +1,5 @@
-﻿
-using Tools;
+﻿using Tools;
+
 
 namespace Profile.Shop
 {

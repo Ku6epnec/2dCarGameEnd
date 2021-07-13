@@ -3,6 +3,7 @@ using Profile;
 using Ui;
 using UnityEngine;
 
+
 public class MainController : BaseController
 {
     public MainController(Transform placeForUi, ProfilePlayer profilePlayer, 
@@ -20,6 +21,8 @@ public class MainController : BaseController
         profilePlayer.CurrentState.SubscribeOnChange(OnChangeGameState);
     }
 
+    #region Fields
+
     private MainMenuController _mainMenuController;
     private GameController _gameController;
     private DailyRewardController _dailyRewardController;
@@ -32,6 +35,10 @@ public class MainController : BaseController
     private readonly StartFightView _startFightView;
     private readonly DailyRewardView _dailyRewardView;
     private readonly CurrencyView _currencyView;
+
+    #endregion
+
+    #region Methods
 
     protected override void OnDispose()
     {
@@ -91,4 +98,6 @@ public class MainController : BaseController
         _fightWindowController?.Dispose();
         _startFightController?.Dispose();
     }
+
+    #endregion
 }

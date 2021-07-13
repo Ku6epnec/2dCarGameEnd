@@ -2,10 +2,12 @@ using System.Collections.Generic;
 using Company.Project.Features;
 using Company.Project.Features.Items;
 
+
 namespace Company.Project.Content
 {
     public class ItemsRepository : BaseController, IRepository<int, IItem>
     {
+        #region Fields
         public IReadOnlyDictionary<int, IItem> Collection => _itemsMapById;
         private Dictionary<int, IItem> _itemsMapById = new Dictionary<int, IItem>();
         
@@ -14,7 +16,11 @@ namespace Company.Project.Content
         {
             PopulateItems(ref _itemsMapById, itemConfigs);
         }
-        
+
+        #endregion
+
+        #region Methods
+
         protected override void OnDispose()
         {
             _itemsMapById.Clear();
@@ -39,5 +45,7 @@ namespace Company.Project.Content
                 Info = new ItemInfo { Title = config.title}
             };
         }
+
+        #endregion
     }
 }

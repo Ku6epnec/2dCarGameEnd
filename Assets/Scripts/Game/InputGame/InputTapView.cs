@@ -2,10 +2,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 namespace Game.InputLogic
 {
     public class InputTapView : BaseInputView
     {
+        [SerializeField] 
+        private Button _buttonMove;
+
+        #region Methods
+
         public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove,
             float speed)
         {
@@ -13,13 +19,12 @@ namespace Game.InputLogic
             _buttonMove.onClick.AddListener(OnClick);
         }
 
-        [SerializeField] 
-        private Button _buttonMove;
-
         private void OnClick()
         {
             OnRightMove(Time.deltaTime * _speed);
         }
+
+        #endregion
     }
 }
 

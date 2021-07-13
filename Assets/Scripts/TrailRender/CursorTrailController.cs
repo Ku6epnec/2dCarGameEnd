@@ -1,6 +1,7 @@
 ﻿using Tools;
 using UnityEngine;
 
+
 namespace Game.Trail
 {
     public class CursorTrailController : BaseController

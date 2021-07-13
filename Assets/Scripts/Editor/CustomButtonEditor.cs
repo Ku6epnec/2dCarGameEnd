@@ -3,10 +3,17 @@ using UnityEditor.UI;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
+
 [CustomEditor(typeof(CustomButton))]
 public class CustomButtonEditor : ButtonEditor
 {
+    #region Fields
+
     private SerializedProperty m_InteractableProperty;
+
+    #endregion
+
+    #region Methods
 
     protected override void OnEnable()
     {
@@ -45,4 +52,6 @@ public class CustomButtonEditor : ButtonEditor
 
         serializedObject.ApplyModifiedProperties();
     }
+
+    #endregion
 }

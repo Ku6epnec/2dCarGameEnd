@@ -2,8 +2,11 @@
 using Profile.Analytic;
 using UnityEngine;
 
+
 public class Root : MonoBehaviour
 {
+    #region Fields
+
     [SerializeField] 
     private Transform _placeForUi;
 
@@ -21,6 +24,10 @@ public class Root : MonoBehaviour
 
     private MainController _mainController;
 
+    #endregion
+
+    #region UnityMethods
+
     private void Awake()
     {
         ProfilePlayer profilePlayer = new ProfilePlayer(15f, new UnityAnalyticTools());
@@ -33,4 +40,6 @@ public class Root : MonoBehaviour
     {
         _mainController?.Dispose();
     }
+
+    #endregion
 }

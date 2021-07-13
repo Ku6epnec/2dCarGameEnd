@@ -6,8 +6,11 @@ using UnityEngine.Localization.Settings;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
+
 public class Localization : MonoBehaviour
 {
+    #region Fields
+
     [SerializeField]
     private TMP_Text _rewardText;
     [SerializeField]
@@ -24,13 +27,14 @@ public class Localization : MonoBehaviour
     private TMP_Text _notificationText;
     [SerializeField]
     private TMP_Text _prefabText;
-
     [SerializeField]
     private Button _russianButton;
-
     [SerializeField]
     private Button _englishButton;
 
+    #endregion
+
+    #region UnityMethods
 
     private void Start()
     {
@@ -80,4 +84,6 @@ public class Localization : MonoBehaviour
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
     }
+
+    #endregion
 }

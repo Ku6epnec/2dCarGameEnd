@@ -2,16 +2,23 @@
 using UnityEngine;
 using UnityEngine.Advertisements;
 
+
 namespace Tools
 {
     public class UnityAdsTools : MonoBehaviour, IAdsShower, IUnityAdsListener
     {
+        #region Fields
+
         private string _gameId = "1457683";
         private string _rewardPlace = "rewardVideo";
         private string _interstitialPlace = "interstitialAds";
 
         private Action _callbackSuccessShowVideo;
-        
+
+        #endregion
+
+        #region Methods
+
         private void Start()
         {
             Advertisement.Initialize (_gameId, true);
@@ -49,6 +56,8 @@ namespace Tools
             if (showResult == ShowResult.Finished)
                 _callbackSuccessShowVideo?.Invoke();
         }
+
+        #endregion
     }
 }
 

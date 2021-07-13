@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 namespace Company.Project.Content
 {
     [CreateAssetMenu(fileName = "AbilityItemConfigDataSource", menuName = "AbilityItemConfigDataSource", order = 0)]

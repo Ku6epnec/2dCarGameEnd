@@ -4,12 +4,18 @@ using Unity.Notifications.iOS;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class NotificationWindow : MonoBehaviour
 {
-    private const string AndroidNotifierId = "android_notifier_id";
+    #region Fields
 
+    private const string AndroidNotifierId = "android_notifier_id";
     [SerializeField]
     private Button _buttonNotification;
+
+    #endregion
+
+    #region UnityMethods
 
     private void Start()
     {
@@ -20,6 +26,10 @@ public class NotificationWindow : MonoBehaviour
     {
         _buttonNotification.onClick.RemoveAllListeners();
     }
+
+    #endregion
+
+    #region Methods
 
     private void CreateNotification()
     {
@@ -62,4 +72,6 @@ public class NotificationWindow : MonoBehaviour
        iOSNotificationCenter.ScheduleNotification(iosSettingsNotification);
 #endif
     }
+
+    #endregion
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 
+
 namespace Profile.Analytic
 {
     public interface IAnalyticTools

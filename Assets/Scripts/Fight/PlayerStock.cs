@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 
+
 abstract class DataPlayer
 {
+    #region Fields
+
     private string _titleData;
     private int _countMoney;
     private int _countHealth;
@@ -13,6 +16,10 @@ abstract class DataPlayer
     {
         _titleData = titleData;
     }
+
+    #endregion
+
+    #region Methods
 
     public void Attach(IEnemy enemy)
     {
@@ -29,9 +36,13 @@ abstract class DataPlayer
         foreach (var investor in _enemies)
             investor.Update(this, dataType);
     }
-    
+
+    #endregion
+
+    #region Properties
+
     public string TitleData => _titleData;
-    
+
     public int Money
     {
         get => _countMoney;
@@ -95,3 +106,5 @@ class Power : DataPlayer
      {
      }
 }
+
+#endregion

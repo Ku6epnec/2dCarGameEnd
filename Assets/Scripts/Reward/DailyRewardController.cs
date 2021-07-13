@@ -4,14 +4,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DailyRewardController : BaseController
 {
+    #region Fields
+
     private DailyRewardView _dailyRewardView;
     private List<ContainerSlotRewardView> _slots;
     private CurrencyController _currencyController;
     private ProfilePlayer _profilePlayer;
 
     private bool _isGetReward;
+
+    #endregion
 
     public DailyRewardController(Transform placeForUi, ProfilePlayer profilePlayer, 
         DailyRewardView generateLevelView, CurrencyView currencyView)
@@ -24,7 +29,9 @@ public class DailyRewardController : BaseController
         _currencyController = new CurrencyController(placeForUi, currencyView);
         AddControllers(_currencyController);
     }
-  
+
+    #region Methods
+
     public void RefreshView()
     {
         InitSlots();
@@ -152,4 +159,6 @@ public class DailyRewardController : BaseController
 
         base.OnDispose();
     }
+
+    #endregion
 }

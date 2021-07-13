@@ -2,10 +2,13 @@
 using Tools;
 using UnityEngine;
 
+
 namespace Game.InputLogic
 {
     public class GyroscopeInputView : BaseInputView
     {
+        #region Methods
+
         public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
         {
             base.Init(leftMove, rightMove, speed);
@@ -26,6 +29,8 @@ namespace Game.InputLogic
             quaternion.Normalize();
             OnRightMove((quaternion.x + quaternion.y) * Time.deltaTime * _speed);
         }
-    } 
+
+        #endregion
+    }
 }
 

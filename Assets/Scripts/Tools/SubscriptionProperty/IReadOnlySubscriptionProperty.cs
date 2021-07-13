@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Tools
 {
     public interface IReadOnlySubscriptionProperty<T>

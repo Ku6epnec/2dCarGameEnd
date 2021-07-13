@@ -1,10 +1,17 @@
 ﻿using Profile;
 using UnityEngine;
 
+
 public class StartFightController : BaseController
 {
+    #region Fields
+
     private StartFightView _startFightView;
     private ProfilePlayer _profilePlayer;
+
+    #endregion
+
+    #region Methods
 
     public StartFightController(Transform placeForUi, ProfilePlayer profilePlayer, 
         StartFightView startFightView)
@@ -31,4 +38,6 @@ public class StartFightController : BaseController
 
         base.OnDispose();
     }
+
+    #endregion
 }

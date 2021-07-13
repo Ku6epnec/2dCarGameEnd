@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine.Analytics;
 
+
 namespace Profile.Analytic
 {
     public class UnityAnalyticTools : IAnalyticTools

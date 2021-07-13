@@ -1,10 +1,14 @@
 using System.Collections.Generic;
 using Company.Project.Content;
 
+
 namespace Company.Project.Features.Shed
 {
     public class UpgradeHandlersRepository : BaseController, IRepository<int, IUpgradeHandler>
     {
+
+        #region Fields
+
         private readonly Dictionary<int, IUpgradeHandler> _upgradeItemsMapById = new Dictionary<int, IUpgradeHandler>();
 
         public IReadOnlyDictionary<int, IUpgradeHandler> Collection => _upgradeItemsMapById;
@@ -14,6 +18,10 @@ namespace Company.Project.Features.Shed
         {
             PopulateItems(ref _upgradeItemsMapById, upgradeItemConfigs);
         }
+
+        #endregion
+
+        #region Methods
 
         private void PopulateItems(
             ref Dictionary<int, IUpgradeHandler> upgradeHandlersMapByType,
@@ -43,5 +51,7 @@ namespace Company.Project.Features.Shed
         {
             _upgradeItemsMapById.Clear();
         }
+
+        #endregion
     }
 }

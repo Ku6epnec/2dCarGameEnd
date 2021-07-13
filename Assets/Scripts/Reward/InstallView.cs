@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public class InstallView : MonoBehaviour
 {
     [SerializeField]

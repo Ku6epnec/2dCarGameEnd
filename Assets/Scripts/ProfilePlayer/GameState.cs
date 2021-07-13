@@ -1,5 +1,4 @@
-﻿
-namespace Profile
+﻿namespace Profile
 {
     public enum GameState
     {

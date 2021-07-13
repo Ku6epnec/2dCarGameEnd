@@ -1,10 +1,13 @@
 ﻿using Tools;
 using UnityEngine;
 
+
 namespace Game.TapeBackground
 {
     public class TapeBackgroundController : BaseController
     {
+        #region Fields
+
         public TapeBackgroundController(IReadOnlySubscriptionProperty<float> leftMove, 
             IReadOnlySubscriptionProperty<float> rightMove)
         {
@@ -22,6 +25,10 @@ namespace Game.TapeBackground
         private readonly SubscriptionProperty<float> _diff;
         private readonly IReadOnlySubscriptionProperty<float> _leftMove;
         private readonly IReadOnlySubscriptionProperty<float> _rightMove;
+
+        #endregion
+
+        #region Methods
 
         protected override void OnDispose()
         {
@@ -41,6 +48,8 @@ namespace Game.TapeBackground
         {
             _diff.Value = value;
         }
+
+        #endregion
     }
 }
 

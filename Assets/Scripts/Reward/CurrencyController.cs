@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 public class CurrencyController : BaseController
 {
     public CurrencyController(Transform placeForUi, CurrencyView currencyView)

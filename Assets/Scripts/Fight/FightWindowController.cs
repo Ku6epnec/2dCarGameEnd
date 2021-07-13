@@ -1,8 +1,11 @@
 ﻿using Profile;
 using UnityEngine;
 
+
 public class FightWindowController : BaseController
 {
+    #region Fields
+
     private FightWindowView _fightWindowViewInstance;
     private ProfilePlayer _profilePlayer;
 
@@ -13,8 +16,9 @@ public class FightWindowController : BaseController
     private Money _money;
     private Health _heath;
     private Power _power;
-
     private Enemy _enemy;
+
+    #endregion
 
     public FightWindowController(Transform placeForUi, FightWindowView fightWindowView, 
         ProfilePlayer profilePlayer)
@@ -24,6 +28,8 @@ public class FightWindowController : BaseController
         _fightWindowViewInstance = Object.Instantiate(fightWindowView, placeForUi);
         AddGameObjects(_fightWindowViewInstance.gameObject);
     }
+
+    #region Methods
 
     public void RefreshView()
     {
@@ -141,4 +147,6 @@ public class FightWindowController : BaseController
 
         base.OnDispose();
     }
+
+    #endregion
 }

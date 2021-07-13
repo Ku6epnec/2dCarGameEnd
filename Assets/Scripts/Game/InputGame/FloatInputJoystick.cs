@@ -1,20 +1,26 @@
-﻿using System;
-using JoostenProductions;
+﻿using JoostenProductions;
 using Tools;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityStandardAssets.CrossPlatformInput;
 
+
 namespace Game.InputLogic
 {
     public class FloatInputJoystick : BaseInputView, IPointerDownHandler, IPointerUpHandler, IDragHandler
     {
+        #region Fields
+
         [SerializeField] 
         private Joystick _joystick;
         [SerializeField] 
         private CanvasGroup _container;
 
         private bool _usedJoystick;
+
+        #endregion
+
+        #region Methods
 
         public override void Init(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, float speed)
         {
@@ -58,6 +64,8 @@ namespace Game.InputLogic
                     OnLeftMove(moveStep);
             }
         }
-    }  
+
+        #endregion
+    }
 }
 

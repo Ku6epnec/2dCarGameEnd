@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 interface IEnemy
 {
     void Update(DataPlayer dataPlayer, DataType dataType);
@@ -7,6 +8,8 @@ interface IEnemy
 
 class Enemy : IEnemy
 {
+    #region Fields
+
     private const int KCoins = 5;
     private const float KForce = 1.5f;
     private const int MaxHealthPlayer = 20;
@@ -15,6 +18,8 @@ class Enemy : IEnemy
     private int _moneyPlayer;
     private int _healthPlayer;
     private int _forcePlayer;
+
+    #endregion
 
     public Enemy(string name)
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Company.Project.Features.Items;
 using UnityEngine;
 
+
 namespace Company.Project.Features.Abilities
 {
     public class AbilityCollectionView : MonoBehaviour, IAbilityCollectionView

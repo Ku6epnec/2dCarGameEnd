@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Tools
 {
     public class SubscriptionProperty<T> : IReadOnlySubscriptionProperty<T>
@@ -17,6 +18,8 @@ namespace Tools
             }
         }
 
+        #region Subscriber
+
         public void SubscribeOnChange(Action<T> subscriptionAction)
         {
             _onChangeValue += subscriptionAction;
@@ -26,6 +29,8 @@ namespace Tools
         {
             _onChangeValue -= unsubscriptionAction;
         }
+
+        #endregion
     }
 }
 
